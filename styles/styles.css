@@ -96,6 +96,23 @@ body {
 
 /* Contenido */
 
+/* Time */
+
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    border-radius: 16px;
+    color: white;
+}
+
+.time .text {
+    color: white !important;
+    font-size: 8rem;
+    font-family: RobotoCondensed;
+    text-align: center;
+}
+
 .content {
     min-height: 100vh;
     display: flex;
@@ -103,6 +120,17 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+@media (orientation: landscape) {
+    .content {
+        min-height: 100vh;
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .navigation {
@@ -229,36 +257,18 @@ body {
     height: 15vw;
 }
 
-/* Footers */
-
-.footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 16px;
-    color: white;
-}
-
-.footer .text {
-    color: white !important;
-    font-size: 8rem;
-    font-family: RobotoCondensed;
-    text-align: center;
-}
 
 /*  Agente  */
+
 .agent {
-    position: fixed;
-    bottom: 0;
-    right: -150px;
-    width: 30vw;
-    height: 20vh;
+    width: 40vw;
+    height: 30vh;
     padding: 0px;
     transform: translateZ(0);
     cursor: pointer;
 }
 
-.agent .link{
+.agent .link {
     cursor: pointer;
 }
 
@@ -267,15 +277,12 @@ body {
     height: 100%;
     object-fit: contain;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-end;
 }
 
 @media (orientation: landscape) {
     .agent {
-        position: re;
-        bottom: 0;
-        right: 0;
         width: 12.5vw;
         height: 40vh;
         z-index: 999;
@@ -290,5 +297,3 @@ body {
         display: block;
     }
 }
-
-
